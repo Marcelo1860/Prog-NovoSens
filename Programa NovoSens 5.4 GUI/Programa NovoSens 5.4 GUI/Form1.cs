@@ -44,11 +44,13 @@ namespace Programa_NovoSens_5._4_GUI
 
             listBox1.Items.Clear();
 
-            String cadena = textBox1.Text;
+            string cadena = textBox1.Text;
 
             lineas = File.ReadAllLines(@cadena);
 
-            String combo = comboBox1.Text;
+            string combo = comboBox1.Text;
+
+            string estandar = comboBox2.Text;
 
             foreach (var linea in lineas)
             {
@@ -64,7 +66,7 @@ namespace Programa_NovoSens_5._4_GUI
             ///////////////////////////////////////////////////////////////////////////////
 
             //-----REALIZA LA OBTENCION DEL NUMERO DE ZONAS ESTABLES, LA DIMENSION DE CADA UNA Y GUARDA SUS VALORES----
-            if (combo == "Etoh 1" || combo == "Teq")
+            if ((combo == "Etoh 1" || combo == "Teq") && (estandar == "1.31" || estandar == "13.06"))
             {
 
                 clsNumelemest zona = new clsNumelemest(); // inicia clase que permite distinguir zonas y elementos estables
@@ -156,7 +158,7 @@ namespace Programa_NovoSens_5._4_GUI
 
                     double[] Resultados = new double[canResult]; // vector que va a contener el resultado de las medidas
 
-                    Resultados = res.calcResultado(Saltos, cantSaltos); // se carga el vector de resultados
+                    Resultados = res.calcResultado(Saltos, cantSaltos, estandar); // se carga el vector de resultados
 
                     double mediares = mate.calcMedia(Resultados, canResult); // variable que contiene la media 
                                                                              // de todos los resultados 
@@ -282,7 +284,7 @@ namespace Programa_NovoSens_5._4_GUI
 
                 if (cont > 10)
                 {
-                    listBox1.Items.Add("seleccione un equipo");
+                    listBox1.Items.Add("Seleccione un equipo y valor de estándar");
                     cont = 0;
                 }
 

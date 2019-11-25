@@ -65,12 +65,23 @@ namespace Programa_NovoSens_5._4_GUI
 
         }
         ///     ///     ///     ///     ///     ///     ///     ///     ///
-        public double[] calcResultado(double[] saltos, int cantsaltos) // permite calcular y retornar un vector con los 
+        public double[] calcResultado(double[] saltos, int cantsaltos, string estandar) // permite calcular y retornar un vector con los 
                                                                        // resultados de las mediciones del gráfico
         {
             int cantResultados = cantsaltos / 3; // variable que contiene la cantidad de resultados 
 
-            double standard = 1.31; // constante que permite alamcenar el valor del estandar
+
+            double standard = 0; // constante que permite alamcenar el valor del estandar
+
+            if (estandar == "1.31")
+            {
+                standard = 1.31;
+            }
+
+            else if (estandar == "13.06")
+            {
+                standard = 13.06;
+            }
 
             int j = 0;
 
