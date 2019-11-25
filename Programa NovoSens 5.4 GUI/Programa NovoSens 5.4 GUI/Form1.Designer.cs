@@ -206,6 +206,7 @@
             this.button2.Text = "Obtener datos";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // Examinar
             // 
@@ -218,6 +219,7 @@
             this.Examinar.TabIndex = 20;
             this.Examinar.Text = "Examinar";
             this.Examinar.UseVisualStyleBackColor = false;
+            this.Examinar.Click += new System.EventHandler(this.Examinar_Click);
             // 
             // textBox1
             // 
