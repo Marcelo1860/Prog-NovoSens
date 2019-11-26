@@ -49,6 +49,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.ZonestX = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -282,12 +283,25 @@
             this.label3.TabIndex = 38;
             this.label3.Text = "Fecha";
             // 
+            // ZonestX
+            // 
+            this.ZonestX.AutoSize = true;
+            this.ZonestX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ZonestX.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ZonestX.Location = new System.Drawing.Point(23, 325);
+            this.ZonestX.Name = "ZonestX";
+            this.ZonestX.Size = new System.Drawing.Size(135, 17);
+            this.ZonestX.TabIndex = 39;
+            this.ZonestX.Text = "Escalones estables";
+            this.ZonestX.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ZonestX);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox3);
@@ -339,6 +353,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox ZonestX;
     }
 }
 

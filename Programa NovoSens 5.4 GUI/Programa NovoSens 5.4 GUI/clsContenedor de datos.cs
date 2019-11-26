@@ -59,14 +59,45 @@ namespace Programa_NovoSens_5._4_GUI
 
             else if (combo == "Teq")
             {
+                int g = 0;
                 int j = 0;
                 foreach (var linea in lineass)
                 {
                     var valores = linea.Split(null);
+
                     double valornum = 0;
                     Double.TryParse(valores[1], out valornum);
-                    num[j] = valornum/100;
+
+                    if (j == 3) // permite distinguir archivos con distinta cantidad de decimales
+                    {
+                        if (valornum > 1000000)
+                        {
+                            g = 1;
+                        }
+
+                        else
+                        {
+                            g = 2;
+                        }
+                    }
+
+                    if (g == 1)
+                    {
+                        num[j] = valornum / 100;
+                    }
+
+                    else if (g == 2)
+                    {
+                        num[j] = valornum / 10;
+                    }
+
+                    else
+                    {
+                        num[j] = valornum / 100;
+                    }
+
                     j++;
+
 
                 }
             }

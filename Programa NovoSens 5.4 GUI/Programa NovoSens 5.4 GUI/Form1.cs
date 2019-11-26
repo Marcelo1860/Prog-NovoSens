@@ -178,7 +178,7 @@ namespace Programa_NovoSens_5._4_GUI
                     desvestSaltos = res.desvestSaltos(Saltos, cantSaltos, mediaSaltos);// carga el vector de desviación
                                                                                        // de los saltos
 
-                    if (Resultadosx.Checked == true || MediaResultx.Checked == true || DesvResultx.Checked == true || Saltosx.Checked == true || MediaSaltosx.Checked == true || DesvSaltosx.Checked == true || VectDatosx.Checked == true || CantSaltosx.Checked == true)
+                    if (Resultadosx.Checked == true || MediaResultx.Checked == true || DesvResultx.Checked == true || Saltosx.Checked == true || MediaSaltosx.Checked == true || DesvSaltosx.Checked == true || VectDatosx.Checked == true || CantSaltosx.Checked == true || ZonestX.Checked == true)
                     {
 
                         if (Resultadosx.Checked == true)
@@ -186,7 +186,10 @@ namespace Programa_NovoSens_5._4_GUI
                             listBox1.Items.Add("Los resultados son: ");
 
                             for (int k = 0; k < canResult; k++)
+
                             {
+                                Resultados[k] = Math.Truncate(Resultados[k] * 100) / 100;
+
                                 listBox1.Items.Add(Resultados[k]);
                             }
                         }
@@ -195,12 +198,16 @@ namespace Programa_NovoSens_5._4_GUI
                         {
                             listBox1.Items.Add("La media de los resultados es: ");
 
+                            mediares = Math.Truncate(mediares * 100) / 100;
+
                             listBox1.Items.Add(mediares);
                         }
 
                         if (DesvResultx.Checked == true)
                         {
                             listBox1.Items.Add("La desviación estándar de los resultados es: ");
+
+                            desvres = Math.Truncate(desvres * 100) / 100;
 
                             listBox1.Items.Add(desvres);
                         }
@@ -211,7 +218,9 @@ namespace Programa_NovoSens_5._4_GUI
 
                             for (int k = 0; k < cantSaltos; k++)
                             {
-                                listBox1.Items.Add(Saltos[k]);
+                               Saltos[k] = Math.Truncate(Saltos[k] * 100) / 100;
+
+                               listBox1.Items.Add(Saltos[k]);
                             }
                         }
 
@@ -220,6 +229,8 @@ namespace Programa_NovoSens_5._4_GUI
                             for (int k = 0; k < 3; k++)
                             {
                                 listBox1.Items.Add("Media de los saltos número " + (k + 1) + " : ");
+
+                                mediaSaltos[k] = Math.Truncate(mediaSaltos[k] * 100) / 100;
 
                                 listBox1.Items.Add(mediaSaltos[k]);
                             }
@@ -231,6 +242,8 @@ namespace Programa_NovoSens_5._4_GUI
                             {
                                 listBox1.Items.Add("Desviación estándar de los saltos número " + (k + 1) + " : ");
 
+                                desvestSaltos[k] = Math.Truncate(desvestSaltos[k] * 100) / 100;
+
                                 listBox1.Items.Add(desvestSaltos[k]);
                             }
                         }
@@ -241,6 +254,8 @@ namespace Programa_NovoSens_5._4_GUI
 
                             for (int k = 0; k < i; k++)
                             {
+                                number[k] = Math.Truncate(number[k] * 100) / 100;
+
                                 listBox1.Items.Add(number[k]);
                             }
                         }
@@ -250,6 +265,18 @@ namespace Programa_NovoSens_5._4_GUI
                             listBox1.Items.Add("La cantidad de saltos es: ");
 
                             listBox1.Items.Add(cantSaltos);
+                        }
+
+                        if (ZonestX.Checked == true)
+                        {
+                            listBox1.Items.Add("Las zonas estables son: ");
+
+                            for (int k = 0; k < elemfilt; k++)
+                            {
+                                media20[k] = Math.Truncate(media20[k] * 100) / 100;
+
+                                listBox1.Items.Add(media20[k]);
+                            }
                         }
                     }
 
