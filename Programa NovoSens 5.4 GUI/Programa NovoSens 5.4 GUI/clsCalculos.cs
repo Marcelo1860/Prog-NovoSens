@@ -109,7 +109,7 @@ namespace Programa_NovoSens_5._4_GUI
             {
                 for (int k = 1; k < 5; k++)
                 {
-                    for (int j = 0; j < (20 + k); j++)
+                    for (int j = 0; j < 20 ; j++)
 
                     {
                         media20[i] += establesfiltrados[(elemfiltrados[i] - j - k), i];
@@ -117,7 +117,9 @@ namespace Programa_NovoSens_5._4_GUI
 
                     media20[i] /= 20;
 
-                    mediaprom[(k - 1), i] = media20[i]; 
+                    mediaprom[(k - 1), i] = media20[i];
+
+                    media20[i] = 0;
                 }
               
 
@@ -130,7 +132,7 @@ namespace Programa_NovoSens_5._4_GUI
                     media20[i] += mediaprom[j, i];
                 }
 
-                media20[i] /= 4;
+                media20[i] = media20[i]/ 4;
             }
 
             return (media20);
