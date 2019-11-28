@@ -74,10 +74,11 @@ namespace Programa_NovoSens_5._4_GUI
 
                     else  // si no es el último, se compara la zona estable actual con la siguiente.
                     {
-                        if (medianofil[(m + 1)] < medianofil[m])// si la actual es mayor a la siguiente significa que 
-                                                                  // se cumple la condición y se aumenta el contador
+                        if (medianofil[(m + 1)] < medianofil[m] || (medianofil[(m + 1)] - medianofil[m]) > (2 * (medianofil[m] - medianofil[m - 1])))// si la actual es mayor a la siguiente significa que 
+                                                                                                                                                     // se cumple la condición y se aumenta el contador o si el
+                                                                                                                                                     //saltos siguiente es mas del doble del anterior
                         {
-                            
+
 
                             contelementos += 4;
                             
@@ -173,9 +174,9 @@ namespace Programa_NovoSens_5._4_GUI
 
                     else // si no es la última zona estables, se compara la zona estable actual con la siguiente. 
                     {
-                        if (medianofil[(m+1)] < medianofil[m])// si la actual es mayor a la siguiente significa que 
-                                                              // se cumple la condición y se realiza la carga del vec-
-                                                              // tor y se aumenta los respectivos contadores
+                        if (medianofil[(m + 1)] < medianofil[m] || (medianofil[(m + 1)] - medianofil[m]) > (2 * (medianofil[m] - medianofil[m - 1])))// si la actual es mayor a la siguiente significa que 
+                                                                                                                                                     // se cumple la condición y se aumenta el contador o si el
+                                                                                                                                                     //saltos siguiente es mas del doble del anterior
                         {
                             for (int i = 0; i < 4; i++)
                             {
@@ -279,9 +280,9 @@ namespace Programa_NovoSens_5._4_GUI
 
                     else // si no es la última zona estables, se compara la zona estable actual con la siguiente. 
                     {
-                        if (medianofil[(m + 1)] < medianofil[m])// si la actual es mayor a la siguiente significa que 
-                                                                  // se cumple la condición y se realiza la carga de la
-                                                                  // matriz y se aumenta los respectivos contadores
+                        if (medianofil[(m + 1)] < medianofil[m] || (medianofil[(m + 1)] - medianofil[m]) > (2 * (medianofil[m] - medianofil[m - 1])))// si la actual es mayor a la siguiente significa que 
+                                                                                                                                                     // se cumple la condición y se aumenta el contador o si el
+                                                                                                                                                     //saltos siguiente es mas del doble del anterior
                         {
                             for (int j = 0; j < maxelem; j++)
                             {

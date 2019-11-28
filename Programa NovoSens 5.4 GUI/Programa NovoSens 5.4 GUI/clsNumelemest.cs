@@ -50,7 +50,7 @@ namespace Programa_NovoSens_5._4_GUI
             double limitemax = 0;
             if (combo == "Etoh 1")
             {
-                limiteMedia = 1000;
+                limiteMedia = 1010;
 
                 limitemax = 6;
             }
@@ -170,7 +170,7 @@ namespace Programa_NovoSens_5._4_GUI
 
             if (combo == "Etoh 1")
             {
-                limiteMedia = 1000;
+                limiteMedia = 1010;
 
                 limitemax = 6;
             }
@@ -289,7 +289,7 @@ namespace Programa_NovoSens_5._4_GUI
 
             if (combo == "Etoh 1")
             {
-                limiteMedia = 1000;
+                limiteMedia = 1010;
 
                 limitemax = 6;
             }
