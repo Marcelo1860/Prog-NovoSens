@@ -83,6 +83,11 @@ namespace Programa_NovoSens_5._4_GUI
                 standard = 13.06;
             }
 
+            else if (estandar == "13.21")
+            {
+                standard = 13.21;
+            }
+
             int j = 0;
 
             int k = 0;

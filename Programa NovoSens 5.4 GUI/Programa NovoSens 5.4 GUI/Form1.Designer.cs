@@ -44,12 +44,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.Examinar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.ZonestX = new System.Windows.Forms.CheckBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -235,18 +235,6 @@
             this.textBox1.Size = new System.Drawing.Size(344, 20);
             this.textBox1.TabIndex = 19;
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "1.31",
-            "13.06"});
-            this.comboBox2.Location = new System.Drawing.Point(182, 204);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 34;
-            this.comboBox2.Text = "Seleccione estándar";
-            // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(287, 140);
@@ -294,6 +282,19 @@
             this.ZonestX.TabIndex = 39;
             this.ZonestX.Text = "Escalones estables";
             this.ZonestX.UseVisualStyleBackColor = true;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "1.31",
+            "13.06",
+            "13.21"});
+            this.comboBox2.Location = new System.Drawing.Point(182, 204);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 34;
+            this.comboBox2.Text = "Seleccione estándar";
             // 
             // Form1
             // 
@@ -348,12 +349,12 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button Examinar;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox ZonestX;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
 
