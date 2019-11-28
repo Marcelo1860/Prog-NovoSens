@@ -52,6 +52,7 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.CVResultados = new System.Windows.Forms.CheckBox();
             this.CVSaltos = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -322,12 +323,23 @@
             this.CVSaltos.Text = "CV% Saltos";
             this.CVSaltos.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(647, 204);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 47);
+            this.button1.TabIndex = 42;
+            this.button1.Text = "Exportar Archivo";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.CVSaltos);
             this.Controls.Add(this.CVResultados);
             this.Controls.Add(this.ZonestX);
@@ -385,6 +397,7 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.CheckBox CVResultados;
         private System.Windows.Forms.CheckBox CVSaltos;
+        private System.Windows.Forms.Button button1;
     }
 }
 
