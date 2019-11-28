@@ -16,6 +16,7 @@ namespace Programa_NovoSens_5._4_GUI
     {
         
         string[] lineas;
+        string[] lineasexp;
         int cont = 0;
         int i = 0;
         public Form1()
@@ -348,6 +349,17 @@ namespace Programa_NovoSens_5._4_GUI
                 }
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.ToString();
+
+            using (StreamWriter outputfile = new StreamWriter(@"C:\Users\Baders\Desktop\Libroscsv\Archivo.txt"))
+            {
+                outputfile.WriteLine(listBox1);
+            }
+  
         }
 
 
