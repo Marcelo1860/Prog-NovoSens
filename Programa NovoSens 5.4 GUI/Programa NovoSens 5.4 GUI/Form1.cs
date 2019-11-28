@@ -178,7 +178,7 @@ namespace Programa_NovoSens_5._4_GUI
                     desvestSaltos = res.desvestSaltos(Saltos, cantSaltos, mediaSaltos);// carga el vector de desviación
                                                                                        // de los saltos
 
-                    if (Resultadosx.Checked == true || MediaResultx.Checked == true || DesvResultx.Checked == true || Saltosx.Checked == true || MediaSaltosx.Checked == true || DesvSaltosx.Checked == true || VectDatosx.Checked == true || CantSaltosx.Checked == true || ZonestX.Checked == true)
+                    if (Resultadosx.Checked == true || MediaResultx.Checked == true || DesvResultx.Checked == true || Saltosx.Checked == true || MediaSaltosx.Checked == true || DesvSaltosx.Checked == true || VectDatosx.Checked == true || CantSaltosx.Checked == true || ZonestX.Checked == true || CVResultados.Checked == true || CVSaltos.Checked == true)
                     {
 
                         if (Resultadosx.Checked == true)
@@ -210,6 +210,17 @@ namespace Programa_NovoSens_5._4_GUI
                             desvres = Math.Truncate(desvres * 100) / 100;
 
                             listBox1.Items.Add(desvres);
+                        }
+
+                        if (CVResultados.Checked == true)
+                        {
+                            double cvSaltos = (desvres / mediares) *100;
+
+                            listBox1.Items.Add(" El coeficiente de variación porcentual de los resultados es: ");
+
+                            cvSaltos = Math.Truncate(cvSaltos * 100) / 100;
+
+                            listBox1.Items.Add(cvSaltos + "%");
                         }
 
                         if (Saltosx.Checked == true)
@@ -245,6 +256,22 @@ namespace Programa_NovoSens_5._4_GUI
                                 desvestSaltos[k] = Math.Truncate(desvestSaltos[k] * 100) / 100;
 
                                 listBox1.Items.Add(desvestSaltos[k]);
+                            }
+                        }
+
+                        if (CVSaltos.Checked == true)
+                        {
+                            double[] cvSaltos = new double[3];
+
+                            for (int k = 0; k < 3; k++)
+                            {
+                                cvSaltos[k] = (desvestSaltos[k] / mediaSaltos[k]) * 100;
+
+                                cvSaltos[k] = Math.Truncate(cvSaltos[k] * 100) / 100;
+
+                                listBox1.Items.Add("EL coeficiente de variación porcentual de los saltos número " + (k + 1) + "es:");
+
+                                listBox1.Items.Add(cvSaltos[k] + "%");
                             }
                         }
 

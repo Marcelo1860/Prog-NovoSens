@@ -73,7 +73,7 @@ namespace Programa_NovoSens_5._4_GUI
 
             double standard = 0; // constante que permite alamcenar el valor del estandar
 
-            if (estandar == "1.31")
+            if (estandar == "1.31") // setea el estándar según el valor indicado en el checkBox
             {
                 standard = 1.31;
             }

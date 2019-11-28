@@ -50,6 +50,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.ZonestX = new System.Windows.Forms.CheckBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.CVResultados = new System.Windows.Forms.CheckBox();
+            this.CVSaltos = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -276,7 +278,7 @@
             this.ZonestX.AutoSize = true;
             this.ZonestX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ZonestX.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ZonestX.Location = new System.Drawing.Point(23, 325);
+            this.ZonestX.Location = new System.Drawing.Point(182, 350);
             this.ZonestX.Name = "ZonestX";
             this.ZonestX.Size = new System.Drawing.Size(135, 17);
             this.ZonestX.TabIndex = 39;
@@ -296,12 +298,38 @@
             this.comboBox2.TabIndex = 34;
             this.comboBox2.Text = "Seleccione estándar";
             // 
+            // CVResultados
+            // 
+            this.CVResultados.AutoSize = true;
+            this.CVResultados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CVResultados.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.CVResultados.Location = new System.Drawing.Point(23, 325);
+            this.CVResultados.Name = "CVResultados";
+            this.CVResultados.Size = new System.Drawing.Size(118, 17);
+            this.CVResultados.TabIndex = 40;
+            this.CVResultados.Text = "CV% Resultados";
+            this.CVResultados.UseVisualStyleBackColor = true;
+            // 
+            // CVSaltos
+            // 
+            this.CVSaltos.AutoSize = true;
+            this.CVSaltos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CVSaltos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.CVSaltos.Location = new System.Drawing.Point(182, 325);
+            this.CVSaltos.Name = "CVSaltos";
+            this.CVSaltos.Size = new System.Drawing.Size(90, 17);
+            this.CVSaltos.TabIndex = 41;
+            this.CVSaltos.Text = "CV% Saltos";
+            this.CVSaltos.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CVSaltos);
+            this.Controls.Add(this.CVResultados);
             this.Controls.Add(this.ZonestX);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -355,6 +383,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox ZonestX;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.CheckBox CVResultados;
+        private System.Windows.Forms.CheckBox CVSaltos;
     }
 }
 
