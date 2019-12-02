@@ -25,7 +25,7 @@ namespace Programa_NovoSens_5._4_GUI
         string[] lineas;
         
         int cont = 0;
-        int contlineas = 1;
+        
         int i = 0;
 
         private void Examinar_Click(object sender, EventArgs e)
@@ -362,13 +362,36 @@ namespace Programa_NovoSens_5._4_GUI
         private void button1_Click(object sender, EventArgs e)
         {
 
-            StreamWriter sw = new StreamWriter(@"C:\Users\Baders\Desktop\Libroscsv\Archivo.txt");
-            foreach (object lista in listBox1.Items)
-            {
-                sw.WriteLine(lista.ToString());
-            }
-            sw.Close();
+            //StreamWriter sw = new StreamWriter(@"C:\Users\Baders\Desktop\Libroscsv\Archivo.txt");
+            //foreach (object lista in listBox1.Items)
+            //{
+            //    sw.WriteLine(lista.ToString());
+            //}
+            //sw.Close();
 
+            Stream myStream;
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+
+            saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            saveFileDialog1.FilterIndex = 2;
+            saveFileDialog1.RestoreDirectory = true;
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                if ((myStream = saveFileDialog1.OpenFile()) != null)
+                {
+             
+                    myStream.Close();
+                }
+
+                StreamWriter sw = new StreamWriter(saveFileDialog1.FileName);
+                foreach (object lista in listBox1.Items)
+                {
+                    sw.WriteLine(lista.ToString());
+                }
+
+                sw.Close();
+            }
         }
 
 

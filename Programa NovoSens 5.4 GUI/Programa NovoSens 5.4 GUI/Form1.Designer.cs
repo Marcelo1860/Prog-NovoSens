@@ -53,6 +53,7 @@
             this.CVResultados = new System.Windows.Forms.CheckBox();
             this.CVSaltos = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -399,6 +400,7 @@
         private System.Windows.Forms.CheckBox CVResultados;
         private System.Windows.Forms.CheckBox CVSaltos;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 
