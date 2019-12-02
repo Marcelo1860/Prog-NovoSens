@@ -15,14 +15,18 @@ namespace Programa_NovoSens_5._4_GUI
     public partial class Form1 : Form
     {
         
-        string[] lineas;
-        string[] lineasexp;
-        int cont = 0;
-        int i = 0;
+    
         public Form1()
         {
+   
             InitializeComponent();
         }
+
+        string[] lineas;
+        
+        int cont = 0;
+        int contlineas = 1;
+        int i = 0;
 
         private void Examinar_Click(object sender, EventArgs e)
         {
@@ -186,12 +190,16 @@ namespace Programa_NovoSens_5._4_GUI
                         {
                             listBox1.Items.Add("Los resultados son: ");
 
+                            
+
                             for (int k = 0; k < canResult; k++)
 
                             {
                                 Resultados[k] = Math.Truncate(Resultados[k] * 100) / 100;
 
                                 listBox1.Items.Add(Resultados[k]);
+
+                               
                             }
                         }
 
@@ -353,13 +361,14 @@ namespace Programa_NovoSens_5._4_GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            listBox1.Items.ToString();
 
-            using (StreamWriter outputfile = new StreamWriter(@"C:\Users\Baders\Desktop\Libroscsv\Archivo.txt"))
+            StreamWriter sw = new StreamWriter(@"C:\Users\Baders\Desktop\Libroscsv\Archivo.txt");
+            foreach (object lista in listBox1.Items)
             {
-                outputfile.WriteLine(listBox1);
+                sw.WriteLine(lista.ToString());
             }
-  
+            sw.Close();
+
         }
 
 
