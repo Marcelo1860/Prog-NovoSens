@@ -186,6 +186,12 @@ namespace Programa_NovoSens_5._4_GUI
                     if (Resultadosx.Checked == true || MediaResultx.Checked == true || DesvResultx.Checked == true || Saltosx.Checked == true || MediaSaltosx.Checked == true || DesvSaltosx.Checked == true || VectDatosx.Checked == true || CantSaltosx.Checked == true || ZonestX.Checked == true || CVResultados.Checked == true || CVSaltos.Checked == true)
                     {
 
+                        string sensor = textBox2.Text;
+
+                        string fecha = textBox3.Text;
+
+                        listBox1.Items.Add("Sensor: " + sensor + " Fecha: " + fecha);
+
                         if (Resultadosx.Checked == true)
                         {
                             listBox1.Items.Add("Los resultados son: ");
