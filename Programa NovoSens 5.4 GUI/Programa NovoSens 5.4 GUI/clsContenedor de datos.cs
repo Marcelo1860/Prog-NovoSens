@@ -41,7 +41,7 @@ namespace Programa_NovoSens_5._4_GUI
             return (i);
         }
 
-       public double[] Cargavector( double[] num, string[] lineass, string combo) // realiza la carga de una vector del tipo Double 
+       public double[] Cargavector( double[] num, string[] lineass, string combo, int i) // realiza la carga de una vector del tipo Double 
                                                   // con los elementos del archivo.csv y lo devuelve
         {
             if (combo == "Etoh 1")
@@ -57,7 +57,7 @@ namespace Programa_NovoSens_5._4_GUI
                 }
             }
 
-            else if (combo == "Teq")
+            else if (combo == "Teq convertido")
             {
                 int g = 0;
                 int j = 0;
@@ -102,6 +102,53 @@ namespace Programa_NovoSens_5._4_GUI
                 }
             }
 
+            else if (combo == "Teq directo")
+            {
+                int j = 0;
+                foreach (var linea in lineass)
+                {
+                    double[] numcomp = new double[i];
+                    var valores = linea.Split(',');
+                    var valoresconv = "0" + valores[0];
+                    double valornum = 0;
+                    double valornumcomp = 0;
+                    Double.TryParse(valoresconv, out valornum);
+                    num[j] = valornum;
+                    Double.TryParse(valores[0], out valornumcomp);
+                    numcomp[j] = valornumcomp;
+
+                    double control = num[j] - numcomp[j];
+
+                    if (control > 1000)
+                    {
+                        num[j] = num[j] / 10000;
+                    }
+
+                    else
+                    {
+                        num[j] = num[j] / 1000;
+                    }
+                    j++;
+                    //try
+                    //{
+                    //    var valores = linea.Split(',');
+                    //    double valornum = 0;
+                    //    Double.TryParse(valores[0], out valornum);
+                    //    num[j] = valornum ;
+                    //    j++;
+                    //}
+                    //catch (Exception)
+                    //{
+
+                    //    var valores = linea.Split('.');
+                    //    double valornum = 0;
+                    //    Double.TryParse(valores[0], out valornum);
+                    //    num[j] = valornum ;
+                    //    j++;
+                    //}
+
+                }
+            }
             else
             {
                 

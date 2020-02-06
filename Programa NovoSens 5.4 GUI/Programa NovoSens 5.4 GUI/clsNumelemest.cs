@@ -56,7 +56,14 @@ namespace Programa_NovoSens_5._4_GUI
             }
             //limite de estabilidad
 
-            else if (combo == "Teq")
+            else if (combo == "Teq convertido")
+            {
+                limiteMedia = 100;
+
+                limitemax = 2;
+            }
+
+            else if (combo == "Teq directo")
             {
                 limiteMedia = 100;
 
@@ -176,13 +183,20 @@ namespace Programa_NovoSens_5._4_GUI
             }
             //limite de estabilidad
 
-            else if (combo == "Teq")
+            else if (combo == "Teq convertido")
             {
                 limiteMedia = 100;
 
                 limitemax = 2;
             }
-            
+
+            else if (combo == "Teq directo")
+            {
+                limiteMedia = 100;
+
+                limitemax =2;
+            }
+
             double resultado = 0;
 
 
@@ -295,13 +309,19 @@ namespace Programa_NovoSens_5._4_GUI
             }
             //limite de estabilidad
 
-            else if (combo == "Teq")
+            else if (combo == "Teq convertido")
             {
                 limiteMedia = 100;
 
                 limitemax = 2;
             }
 
+            else if (combo == "Teq directo")
+            {
+                limiteMedia = 100;
+
+                limitemax = 2;
+            }
             double resultado = 0;
 
             //double limitemin = 0.1;

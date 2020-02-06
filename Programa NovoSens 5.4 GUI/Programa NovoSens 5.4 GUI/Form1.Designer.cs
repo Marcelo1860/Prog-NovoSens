@@ -188,7 +188,8 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Etoh 1",
-            "Teq"});
+            "Teq convertido",
+            "Teq directo"});
             this.comboBox1.Location = new System.Drawing.Point(23, 204);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);

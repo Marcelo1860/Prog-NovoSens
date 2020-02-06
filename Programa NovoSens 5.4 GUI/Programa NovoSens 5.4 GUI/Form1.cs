@@ -66,12 +66,17 @@ namespace Programa_NovoSens_5._4_GUI
 
             clsContenedor_de_datos file = new clsContenedor_de_datos();
 
-            number = file.Cargavector(number, lineas, combo);
+            number = file.Cargavector(number, lineas, combo, i);
+
+            for (int k = 0; k < i; k++)
+            {
+                listBox1.Items.Add(number[k]);
+            }
 
             ///////////////////////////////////////////////////////////////////////////////
 
             //-----REALIZA LA OBTENCION DEL NUMERO DE ZONAS ESTABLES, LA DIMENSION DE CADA UNA Y GUARDA SUS VALORES----
-            if ((combo == "Etoh 1" || combo == "Teq") && (estandar == "1.31" || estandar == "13.06" || estandar == "13.21"))
+            if ((combo == "Etoh 1" || combo == "Teq convertido" || combo == "Teq directo") && (estandar == "1.31" || estandar == "13.06" || estandar == "13.21"))
             {
 
                 clsNumelemest zona = new clsNumelemest(); // inicia clase que permite distinguir zonas y elementos estables
